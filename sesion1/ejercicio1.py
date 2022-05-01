@@ -40,4 +40,4 @@ objElias.transferir(objJhomar,50)
 # Mostramos el balance
 respuestaBalanceElias=objElias.mostrarBalance()
 respuestaBalanceJhomar=objJhomar.mostrarBalance()
-print(str(respuestaBalanceElias)+" "+str(respuestaBalanceJhomar))
+print("{} {}".format(str(respuestaBalanceElias),str(respuestaBalanceJhomar)))
