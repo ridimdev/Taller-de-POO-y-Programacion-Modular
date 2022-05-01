@@ -24,9 +24,11 @@ class User:
     def mostrarBalance(self):
         return f'Usuario: {self.nombre} - Saldo: {self.dinero}'
     
-    def transferir(self,destino,monto):
-        self.retirar(monto)
-        destino.depositar(monto)
+    def transferir(self,destino):
+        monto = input('Ingrese la cantidad a depositar: ')
+        money = int(monto)
+        self.retirar(money)
+        destino.depositar(money)
 
 objElias = User("Elias", 100)
 objJhomar = User("Jhomar", 100)
@@ -35,7 +37,7 @@ objJhomar = User("Jhomar", 100)
 # objElias.depositar(5)
 # Retiramos 4 soles para un helado
 # objElias.retirar(4)
-objElias.transferir(objJhomar,50)
+objElias.transferir(objJhomar)
 
 # Mostramos el balance
 respuestaBalanceElias=objElias.mostrarBalance()
